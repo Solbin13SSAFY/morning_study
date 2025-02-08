@@ -72,4 +72,3 @@ A형으로 가는 지름길은 졸업하는 것으로하고 이번주에 풀어�
 
 3. 그래프 전체를 탐색할 때 우선순위에 따라 전위, 중위, 후위 -> 정처기에 나오니 한번 봐두자
    - 전위, 중위, 후위는 부모노드를 언제 방문처리 하는냐의 순서, 자식노드는 좌우순서
-<img src="https://github.com/user-attachments/assets/75d2f2cc-bb9a-459e-83bb-a53bb9bdc61c" width="300" height=300"/>
