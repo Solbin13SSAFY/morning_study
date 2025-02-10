@@ -1,3 +1,5 @@
+package week03.solbin;
+
 import java.util.*;
 class Main
 {

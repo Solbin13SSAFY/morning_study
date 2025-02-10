@@ -1,6 +1,6 @@
+package week03.solbin;
 import java.util.*;
-class Main
-{
+class tue_boj_2798_∫Ì∑¢¿Ë {
     final static Scanner sc = new Scanner(System.in);
     public static void main(String args[]) throws Exception
     {

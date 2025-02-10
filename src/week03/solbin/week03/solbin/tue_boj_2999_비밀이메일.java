@@ -1,3 +1,5 @@
+package week03.solbin;
+
 import java.util.*;
 class Main
 {
@@ -9,7 +11,7 @@ class Main
     	int n = str.length();
     	int r = 1;
     	int c = n;
-    	// R<=C이고 R*C=N이므로 sqrt(n)에서 차례대로 하나씩 줄여나간다.
+    	// R<=C�씠怨� R*C=N�씠誘�濡� sqrt(n)�뿉�꽌 李⑤���濡� �븯�굹�뵫 以꾩뿬�굹媛꾨떎.
     	for (int i=(int) Math.sqrt(n);i>0;i--) {
     		if (n%i==0) {
     			r=i;

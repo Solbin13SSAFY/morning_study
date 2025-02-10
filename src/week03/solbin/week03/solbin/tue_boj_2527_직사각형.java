@@ -1,6 +1,7 @@
+package week03.solbin;
 import java.util.Arrays;
 import java.util.Scanner;
-public class Main {
+public class tue_boj_2527_직사각형 {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		for (int x=0;x<4;x++) {

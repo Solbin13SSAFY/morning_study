@@ -1,4 +1,4 @@
-
+package week03.solbin;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
  
-public class Solution {
+public class thu_swea_4193_수영대회 {
 	final static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
 	private static int n;
@@ -25,8 +25,8 @@ public class Solution {
 	
 	private static String run() throws IOException {
 		n = Integer.parseInt(br.readLine());
-		min = -1; // 도착 불가인 경우 -1 출력
-		queue = new LinkedList<>(); // 큐 초기화
+		min = -1; // �룄李� 遺덇��씤 寃쎌슦 -1 異쒕젰
+		queue = new LinkedList<>(); // �걧 珥덇린�솕
 		StringTokenizer st;
 		arr = new int[n][n];
 		for (int i=0;i<n;i++) {
@@ -49,18 +49,18 @@ public class Solution {
 			int yy = item[1];
 			int tt = item[2];
 			
-			// 도착함
+			// �룄李⑺븿
 			if (xx == fx && yy == fy) {
 				min=tt;
 				break;
 			}
 			
-			// 상하좌우로 움직일 때 벽이 없다면 시간을 더하고 한칸 이동
+			// �긽�븯醫뚯슦濡� ��吏곸씪 �븣 踰쎌씠 �뾾�떎硫� �떆媛꾩쓣 �뜑�븯怨� �븳移� �씠�룞
 			int[] dx = new int[] {-1,1,0,0};
 			int[] dy = new int[] {0,0,-1,1};
 			for (int i=0;i<4;i++) {
 				if (bound(xx+dx[i],yy+dy[i])) {
-					//소용돌이가 열리지 않았으면 한턴 기다림. 시간을 더하고 다시 큐에 추가함
+					//�냼�슜�룎�씠媛� �뿴由ъ� �븡�븯�쑝硫� �븳�꽩 湲곕떎由�. �떆媛꾩쓣 �뜑�븯怨� �떎�떆 �걧�뿉 異붽��븿
 					if (arr[xx+dx[i]][yy+dy[i]] == 2 && tt % 3 != 2) {
 						queue.add(new int[] {xx,yy,tt+1});
 						continue;
@@ -74,7 +74,7 @@ public class Solution {
 		return String.valueOf(min);
 	}
 	
-	// 테두리나 벽에 막혔는지 판단
+	// �뀒�몢由щ굹 踰쎌뿉 留됲삍�뒗吏� �뙋�떒
 	private static boolean bound(int x,int y) {
 		return (!(x<0||x>=n||y<0||y>=n)&&arr[x][y]!=1);
 	}

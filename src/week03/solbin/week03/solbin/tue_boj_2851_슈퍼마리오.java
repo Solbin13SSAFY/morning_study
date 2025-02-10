@@ -1,3 +1,5 @@
+package week03.solbin;
+
 import java.util.Scanner;
 class Main
 {
@@ -9,7 +11,7 @@ class Main
 		for (int i = 0; i < 10; i++) {
 			int input = sc.nextInt();
 			sum += input;
-            // 차이가 다시 상승하기 시작하는 지점에서 break
+            // 李⑥씠媛� �떎�떆 �긽�듅�븯湲� �떆�옉�븯�뒗 吏��젏�뿉�꽌 break
 			if (Math.abs(100-sum)>diff) {
 				sum -=input ;
 				break;

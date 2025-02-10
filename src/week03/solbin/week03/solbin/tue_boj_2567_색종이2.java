@@ -1,9 +1,11 @@
+package week03.solbin;
+
 import java.util.Scanner;
-public class Main {
+public class tue_boj_2567_색종이2 {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		int T=sc.nextInt();
-		// 경계를 고려하여 상하좌우 한칸씩 늘린다.
+		// 寃쎄퀎瑜� 怨좊젮�븯�뿬 �긽�븯醫뚯슦 �븳移몄뵫 �뒛由곕떎.
 		boolean[][] arr = new boolean[102][102];
 		int sum=0;
 		for (int t=0;t<T;t++) {
@@ -17,11 +19,11 @@ public class Main {
 		}
 		for (int i=0;i<100;i++) {
 			for (int j=0;j<101;j++) {
-                // 가로방향 스캔
-				// 둘중 하나만 1일 때 둘레에 1을 더한다.
+                // 媛�濡쒕갑�뼢 �뒪罹�
+				// �몮以� �븯�굹留� 1�씪 �븣 �몮�젅�뿉 1�쓣 �뜑�븳�떎.
 				if (arr[j][i]^arr[j][i+1]) sum++;
 
-                // 세로방향 스캔
+                // �꽭濡쒕갑�뼢 �뒪罹�
 				if (arr[i][j]^arr[i+1][j]) sum++;
 			}
 		}

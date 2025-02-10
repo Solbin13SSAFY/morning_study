@@ -1,9 +1,10 @@
+package week03.solbin;
 import java.util.Scanner;
-public class Main {
+public class tue_boj_2563_색종이 {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		int T=sc.nextInt();
-        // 배열로 풀면 시간복잡도가 크지만 100x100으로 제한돼있어서 괜찮을듯
+        // 諛곗뿴濡� ��硫� �떆媛꾨났�옟�룄媛� �겕吏�留� 100x100�쑝濡� �젣�븳�뤌�엳�뼱�꽌 愿쒖갖�쓣�벏
 		boolean[][] arr = new boolean[100][100];
 		int sum=0;
 		for (int t=0;t<T;t++) {

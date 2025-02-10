@@ -1,3 +1,5 @@
+package week03.solbin;
+
 import java.util.*;
 class Main
 {
@@ -11,13 +13,13 @@ class Main
         for (int i=0;i<n-1;i++) {
         	if (arr[i]=='L'&&arr[i+1]=='L') {
         		if (isFliped) {
-                    // 커플석 만날때마다 컵 개수를 줄임
+                    // 而ㅽ뵆�꽍 留뚮궇�븣留덈떎 而� 媛쒖닔瑜� 以꾩엫
         			sum--;
-                    // 이미 지나온 길은 싱글이라고 표시함
+                    // �씠誘� 吏��굹�삩 湲몄� �떛湲��씠�씪怨� �몴�떆�븿
         			arr[i]='S';
         			arr[i+1]='S';
         		} else {
-                    // 커플석이 처음 나오는 곳에서 컵홀더 방향을 뒤집음.
+                    // 而ㅽ뵆�꽍�씠 泥섏쓬 �굹�삤�뒗 怨녹뿉�꽌 而듯��뜑 諛⑺뼢�쓣 �뮘吏묒쓬.
         			isFliped=true;
         			arr[i]='S';
         			arr[i+1]='S';
