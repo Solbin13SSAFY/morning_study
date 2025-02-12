@@ -4,30 +4,54 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class thu_boj_27961_°í¾çÀÌ´Â¸¹À»¼ö·ÏÁÁ´Ù {
+public class thu_boj_27961_ê³ ì–‘ì´ëŠ”ë§ì„ìˆ˜ë¡ì¢‹ë‹¤ {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		long ret;
 		long n = Long.parseLong(br.readLine());
 		
-		// method 1 : ÀÌÁø¼öÀÇ °¡Àå ³ôÀº ºñÆ® µÚÂÊ¿¡ ÀÖ´Â 0ÀÇ °¹¼ö¸¦ Ä«¿îÆ®
+		// method 1 : ì´ì§„ìˆ˜ì˜ ê°€ì¥ ë†’ì€ ë¹„íŠ¸ ë’¤ìª½ì— ìˆëŠ” 0ì˜ ê°¯ìˆ˜ë¥¼ ì¹´ìš´íŠ¸
 		if (n>1) {
 			ret = Long.numberOfTrailingZeros(Long.highestOneBit(n-1))+2;
 		} else {
 			ret = n;
 		}
 		
-		// method 2 : ¹ØÀÌ 2ÀÎ log ÀÌ¿ë
+		// method 2 : ë°‘ì´ 2ì¸ log ì´ìš©
 		if (n>1) {
 			ret = (long)(Math.log(n-1)/Math.log(2))+2;
 		} else {
 			ret = n;
 		}
 		
-		// method 3 : Binary String À¸·Î º¯È¯
+		// method 3 : Binary String ìœ¼ë¡œ ë³€í™˜
 		if (n>1) {
 			ret = Long.toBinaryString(n-1).length()+1;
+		} else {
+			ret = n;
+		}
+
+		// method 4 : ë¹„íŠ¸ì´ë™
+		ret= 1;
+		long tmp = n-1;
+		if (n>1) {
+			while (tmp>0) {
+				tmp>>=1;
+				ret++;
+			}
+		} else {
+			ret = n;
+		}
+		
+		// method 5 : ë‚˜ëˆ—ì…ˆ
+		ret= 1;
+		tmp = n-1;
+		if (n>1) {
+			while (tmp>0) {
+				tmp/=2;
+				ret++;
+			}
 		} else {
 			ret = n;
 		}
