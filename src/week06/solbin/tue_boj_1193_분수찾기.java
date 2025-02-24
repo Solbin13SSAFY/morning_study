@@ -1,4 +1,4 @@
-package week06.solbin.morning_study;
+package week06.solbin;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
