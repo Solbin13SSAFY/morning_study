@@ -16,6 +16,7 @@ public class thu_boj_1952_달팽이2 {
             for(int x=0; x<n; x++) {
                 visited[y][x] = false;
             }
+            Arrays.fill(visited[x],true);
         } //visited: false로 초기화
 
         visited[0][0] = true;
