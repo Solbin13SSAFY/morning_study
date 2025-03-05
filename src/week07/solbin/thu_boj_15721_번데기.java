@@ -1,7 +1,9 @@
+package week07.solbin;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-class Main {
+class thu_boj_15721_번데기 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
     

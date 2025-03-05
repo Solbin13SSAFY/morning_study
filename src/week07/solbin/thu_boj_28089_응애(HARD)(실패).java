@@ -1,8 +1,10 @@
+package week07.solbin;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-class Main {
+class thu_boj_28089_응애(HARD)(실패) {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringBuilder sb = new StringBuilder();
 	
@@ -31,12 +33,12 @@ class Main {
 			int idx = Integer.parseInt(br.readLine());
 			int val = idx/50;
 			int mod = idx%50;
-			baby[val]|=(1<<mod);
+			baby[val]|=(1L<<mod);
 		}
 		for (long i=0;i<k;i++) {
 			for (int j=0;j<size;j++) {
-				left[j]=(baby[j]&~(1L<<s(j)))<<1|((baby[b(j+1)]&1L<<s(j+1))!=0?1:0);
-				right[j]=(baby[j]>>1)|((baby[b(j-1)]&1)!=0?1L<<s(j):0);
+				left[j]=((baby[j]&(~(1L<<s(j))))<<1)|((baby[b(j+1)]&(1L<<s(j+1)))!=0?1L:0);
+				right[j]=(baby[j]>>1L)|((baby[b(j-1)]&1L)!=0?1L<<s(j):0);
 			}
 			for (int j=0;j<size;j++) {
 				baby[j]=left[j]^right[j];
@@ -55,6 +57,6 @@ class Main {
 	}
 	
 	static int s(int x) {
-		return (x+size)%size==size-1?rem-1:49;
+		return (x+size)%size==size-1&&rem!=0?rem-1:49;
 	}
 }

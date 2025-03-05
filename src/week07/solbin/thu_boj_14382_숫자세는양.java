@@ -1,9 +1,11 @@
+package week07.solbin;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
-class Main {
+class thu_boj_14382_숫자세는양 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
     
