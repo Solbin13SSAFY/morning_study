@@ -32,21 +32,21 @@ public class Main {
 		 *  주어진 코스트로 줄일 수 있는 최대의 메모리(무게)를 구하면 될듯
 		 */
 
-        // 가방 문제에서 무게와 비용을 서로 뒤바꿔서, 최소의 비용으로 최대의 무게(메모리)를 담게 하는 가방문제로 변형시킴
+		// 가방 문제에서 무게와 비용을 서로 뒤바꿔서, 최소의 비용으로 최대의 무게(메모리)를 담게 하는 가방문제로 변형시킴
 		long[][] dp = new long[n+1][wholeCost+1];
 		for (int i=1;i<=n;i++) {
 			for (int j=1;j<=wholeCost;j++) {
 				int p = memory[i];
 				int c = cost[i];
 				if (j>=c&&c!=0) {
-                    // 더 적은 비용으로 더 많은 무게(메모리)를 담을 수 있는지
+					// 더 적은 비용으로 더 많은 무게(메모리)를 담을 수 있는지
 					dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j-c]+p);
 				} else {
 					dp[i][j] = dp[i-1][j];
 				}
 			}
 		}
-        // 주어진 메모리를 확보할 수 있는 배치중에서 최소비용을 찾음
+		// 주어진 메모리를 확보할 수 있는 배치중에서 최소비용을 찾음
 		for (int i=0;i<=wholeCost;i++) {
 			if (dp[n][i]>=m) {
 				System.out.println(i);
