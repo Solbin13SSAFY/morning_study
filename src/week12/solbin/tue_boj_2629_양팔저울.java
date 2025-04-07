@@ -22,19 +22,19 @@ public class Main {
 		for (int i=0;i<q;i++,sb.append(" ")) {
 			int m = Integer.parseInt(st.nextToken());
 			Set<Integer> set = new HashSet<>();
-            // 일단 초기 무게를 셋에 집어넣음
+			// 일단 초기 무게를 셋에 집어넣음
 			set.add(m);
 			for (int j=0;j<n;j++) {
 				List<Integer> list = new ArrayList<>(set);
 				int size = list.size();
 				for (int k=0;k<size;k++) {
-                    // 셋에 플마 무게를 집어넣음
+                    			// 셋에 플마 무게를 집어넣음
 					set.add(list.get(k)+arr[j]);
 					set.add(list.get(k)-arr[j]);
 				}
 			}
-            // 0이 존재하면 가능, 존재하지않으면 불가능
-            // DP로 풀려고 했는데 못풀겠음...
+			// 0이 존재하면 가능, 존재하지않으면 불가능
+			// DP로 풀려고 했는데 못풀겠음...
 			sb.append(set.contains(0)?"Y":"N");
 		}
 		System.out.println(sb);
