@@ -24,7 +24,7 @@ public class Main {
 			}
 		}
 
-        // pq는 높이 순으로, 같은 높이면 경로 긴 순으로 정렬
+        	// pq는 높이 순으로, 같은 높이면 경로 긴 순으로 정렬
 		Queue<int[]> queue = new PriorityQueue<>((a,b)->{
 			if (a[3]==b[3]) {
 				return b[2]-a[2];
@@ -34,7 +34,7 @@ public class Main {
 		});
 		boolean[][] visited = new boolean[n][n];
 
-        // 가장 낮은 지점을 pq에 다 넣음
+        	// 가장 낮은 지점을 pq에 다 넣음
 		for (int i=0;i<n;i++) {
 			loop:
 			for (int j=0;j<n;j++) {
@@ -47,7 +47,7 @@ public class Main {
 			}
 		}
 
-        // pq 순회
+        	// pq 순회
 		while (!queue.isEmpty()) {
 			int[] item = queue.poll();
 			int x = item[0];
